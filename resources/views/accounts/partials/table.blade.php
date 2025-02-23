@@ -1,32 +1,28 @@
-<table>
+<table border="1" width="100%">
     <thead>
         <tr>
-            <th>#</th>
+            <th></th>
+            <th>STT</th>
             <th>Họ và Tên</th>
             <th>Vai trò</th>
             <th>Tên đăng nhập</th>
+            <th>Pass</th>
             <th>Email</th>
-            <th>Ngày sinh</th>
-            <th>Hành động</th>
+            <th>Ngày Tháng năm sinh</th>
         </tr>
     </thead>
     <tbody>
-        @foreach ($accounts as $index => $account)
-        <tr>
-            <td>{{ $index + 1 }}</td>
-            <td>{{ $account->name }}</td>
-            <td>{{ $account->role }}</td>
-            <td>{{ $account->username }}</td>
-            <td>{{ $account->email }}</td>
-            <td>{{ $account->birthdate }}</td>
-            <td>
-                <form action="{{ url('/delete') }}" method="POST">
-                    @csrf
-                    <input type="hidden" name="id" value="{{ $account->id }}">
-                    <button type="submit">Xóa</button>
-                </form>
-            </td>
-        </tr>
+        @foreach($accounts as $index => $account)
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>{{ $index + 1 }}</td>
+                <td>{{ $account->name }}</td>
+                <td>{{ $account->role }}</td>
+                <td>{{ $account->username }}</td>
+                <td>{{ $account->password }}</td>
+                <td>{{ $account->email }}</td>
+                <td>{{ \Carbon\Carbon::parse($account->dob)->format('d/m/Y') }}</td>
+            </tr>
         @endforeach
     </tbody>
 </table>

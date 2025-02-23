@@ -126,3 +126,28 @@ tr:hover {
     text-decoration: none;
     cursor: pointer;
 }
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    padding: 8px 15px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+}
+
