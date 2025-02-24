@@ -1,71 +1,60 @@
-<<<<<<< HEAD
-# High-level-Web
-Dynamic Web
-=======
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Hệ Thống Quản Lý Tài Khoản
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Giới Thiệu
+Dự án **Hệ Thống Quản Lý Tài Khoản** là một ứng dụng web được phát triển bằng PHP và Laravel Framework, nhằm mục đích quản lý thông tin tài khoản người dùng một cách hiệu quả và an toàn. Ứng dụng cung cấp các chức năng cơ bản như đăng ký, đăng nhập, quản lý thông tin cá nhân, và phân quyền truy cập cho người dùng và quản trị viên.
 
-## About Laravel
+Dự án này phù hợp cho các doanh nghiệp nhỏ, tổ chức, hoặc cá nhân muốn xây dựng một hệ thống quản lý người dùng đơn giản nhưng mạnh mẽ.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Công Nghệ Sử Dụng
+- **Frontend**: HTML, CSS, JavaScript, Bootstrap
+- **Backend**: PHP, Laravel Framework
+- **Database**: MySQL
+- **Authentication**: Laravel Auth (Xác thực người dùng)
+- **Version Control**: Git
+- **Tools**: Composer, Artisan CLI
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## Tính Năng Chính
+### 1. Đăng Ký Tài Khoản
+- Người dùng có thể đăng ký tài khoản mới bằng cách điền thông tin cá nhân như tên, email, và mật khẩu.
+- Mật khẩu được mã hóa bằng bcrypt để đảm bảo an toàn.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 2. Đăng Nhập
+- Người dùng có thể đăng nhập vào hệ thống bằng email và mật khẩu.
+- Hệ thống hỗ trợ chức năng "Nhớ mật khẩu" để thuận tiện cho người dùng.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 3. Quản Lý Thông Tin Cá Nhân
+- Người dùng có thể xem và cập nhật thông tin cá nhân của mình, bao gồm tên, email, và mật khẩu.
+- Hệ thống yêu cầu xác nhận mật khẩu hiện tại khi thay đổi thông tin quan trọng.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 4. Phân Quyền Truy Cập
+- Hệ thống phân quyền giữa hai loại người dùng:
+  - **Người dùng thường**: Có quyền xem và cập nhật thông tin cá nhân.
+  - **Quản trị viên**: Có quyền quản lý tất cả người dùng trong hệ thống (thêm, sửa, xóa).
 
-## Laravel Sponsors
+### 5. Quản Lý Người Dùng (Admin)
+- Quản trị viên có thể:
+  - Xem danh sách tất cả người dùng.
+  - Thêm người dùng mới.
+  - Chỉnh sửa thông tin người dùng.
+  - Xóa người dùng khỏi hệ thống.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## Hướng Dẫn Cài Đặt
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### Yêu Cầu Hệ Thống
+- PHP >= 7.4
+- Composer
+- MySQL
+- Git
 
-## Contributing
+### Các Bước Cài Đặt
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
->>>>>>> 04b3f15 (Initial commit - Upload Laravel project)
+1. **Clone repository**:
+   ```bash
+   git clone https://github.com/DamVietHung/High-level-Web.git
+   cd account-management-system
