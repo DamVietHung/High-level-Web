@@ -3,18 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Laravel App')</title>
-    <link rel="stylesheet" href="{{ asset('css/h.css') }}">
+    <title>Form & Survey Management</title>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-    <header>
-        <h1>Laravel App</h1>
-    </header>
-
-    <main>
-        @yield('content')
-    </main>
-
-    <script src="{{ asset('js/h.js') }}"></script>
+    @yield('content')
 </body>
 </html>

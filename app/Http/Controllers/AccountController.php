@@ -1,28 +1,34 @@
 <?php
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Account;
+use Illuminate\Http\Request;
 
-class AccountController extends Controller {
-    public function index() {
+class AccountController extends Controller
+{
+    public function index()
+    {
         $accounts = Account::all();
         return view('accounts.index', compact('accounts'));
     }
-    
-    public function store(Request $request) {
-        Account::create($request->all());
-        return redirect('/');
+
+    public function store(Request $request)
+    {
+        Account::create([
+            'name' => $request->name,
+            'role' => $request->role,
+            'username' => $request->username,
+            'password' => bcrypt($request->password),
+            'email' => $request->email,
+            'birthdate' => $request->birthdate
+        ]);
+
+        return redirect()->route('accounts.index');
     }
-    
-    public function update(Request $request) {
-        $account = Account::find($request->id);
-        $account->update($request->all());
-        return redirect('/');
-    }
-    
-    public function destroy(Request $request) {
-        Account::destroy($request->id);
-        return redirect('/');
+
+    public function destroy($id)
+    {
+        Account::destroy($id);
+        return redirect()->route('accounts.index');
     }
 }
