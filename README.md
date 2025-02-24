@@ -54,7 +54,34 @@ Dự án này phù hợp cho các doanh nghiệp nhỏ, tổ chức, hoặc cá 
 
 ### Các Bước Cài Đặt
 
-1. **Clone repository**:
-   ```bash
-   git clone https://github.com/DamVietHung/High-level-Web.git
-   cd account-management-system
+Các Bước Cài Đặt
+
+## Clone repository:
+
+git clone https://github.com/DamVietHung/High-level-Web.git
+cd account-management-system
+
+## Cài đặt các dependencies:
+
+composer install
+
+## Tạo tệp .env và cấu hình:
+
+cp .env.example .env
+
+## Mở tệp .env và cấu hình thông tin database.
+
+## Tạo khóa ứng dụng:
+
+php artisan key:generate
+
+## Chạy migration và seed database:
+
+php artisan migrate --seed
+
+## Khởi động server:
+
+php artisan serve
+
+## Ứng dụng sẽ chạy trên http://127.0.0.1:8000
+
